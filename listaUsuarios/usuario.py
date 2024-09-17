@@ -24,7 +24,17 @@ class Usuario:
             return True   
 
     def alterarSenha(self):
-        if self.validarSenha():            
+        
+        senhaAtual = self.senha
+        def validarSenha(self):
+            tentativaSenha = input("Informe a senha atual : ")
+            
+            if (tentativaSenha != senhaAtual):
+                return False
+            
+            return True    
+               
+        if validarSenha(self):            
             novaSenha = input("Informe qual será a nova senha : ")
             novaSenhaVerificacao = input("Digite a mesma senha novamente : ")
             
