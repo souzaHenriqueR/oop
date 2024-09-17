@@ -12,7 +12,19 @@ class Funcionario:
         print(f"cpf : {self.cpf}")
         print(f"salario R$ : {self.salario}")
         print(f"cargo : {self.cargo}")
-
+        
+        
+        
+    def modificarSalario(self,novoSalario):
+        if (novoSalario > 0):
+            self.salario = novoSalario
+        
+        return "Valor invalido"
+    
+    def modificarCargo(self,novoCargo):
+        if (novoCargo != " "):
+            self.cargo = novoCargo
+        
 if __name__ == "__main__":
 
     Carlos = Funcionario("Carlos","Eduardo Souza","012987344-27",1800,"Padeiro")
@@ -24,3 +36,9 @@ if __name__ == "__main__":
     Julio.Info()
     print()
     Maria.Info()
+    
+    Maria.modificarCargo("Analista Contábil")
+    Maria.modificarSalario(3500.00)
+    Carlos.modificarSalario(1800.00)
+    Maria.Info()
+    Carlos.Info()

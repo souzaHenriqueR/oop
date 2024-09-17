@@ -10,6 +10,13 @@ class Empresa:
         print(f"CPNJ : {self.cnpj}")
         print(f"Endereço : {self.endereco}")
         print(f"Presta o seguinte serviço : {self.servico}")
+    
+    def cadastrarEndereco(self,novoEndereco):
+        if (novoEndereco != " " ):
+            
+            self.endereco = novoEndereco
+        
+        return "Endereço invalido"
 
 
 
@@ -23,4 +30,8 @@ if __name__ == "__main__":
     print()
     Tharamps.Info()
     print()
+    Nestle.Info()
+    
+    Nestle.cadastrarEndereco("Paraiba")
+    print()    
     Nestle.Info()
