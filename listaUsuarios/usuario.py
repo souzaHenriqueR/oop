@@ -15,14 +15,6 @@ class Usuario:
         print(f"data de nascimento : {self.dataNasc}")
         print(f"Senha atual : {self.senha}")
 
-    def validarSenha(self):
-            tentativaSenha = input("Informe a senha atual : ")
-            
-            if (tentativaSenha != self.senha):
-                return False
-            
-            return True   
-
     def alterarSenha(self):
         
         senhaAtual = self.senha
